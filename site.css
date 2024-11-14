@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #222;
+  color: white;
+}
+
+header img {
+  height: 70px; 
+}
+.menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu ul li a:hover {
+  color: #f39c12; 
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  
+}
+
+footer {
+  background-color: #aca7a7;
+  color: black;
+  padding: 10px;
+  margin: 10px 0 0;
+  text-align: center;
+}
+
+/* Layout dos produtos usando CSS Grid */
+.produtos {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+}
+
+.produto img {
+  width: 100%;
+  height: auto; 
+}
+
+/* Três colunas para telas grandes e uma coluna para pequenas */
+@media (min-width: 768px) {
+  .produtos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .produtos {
+    grid-template-columns: 1fr;
+  }
+}
+
+.produto {
+  background-color: #f39c12;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+}
